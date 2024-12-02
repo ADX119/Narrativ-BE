@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: #e6e6ff;
+    width: 100vw;
+    overflow: hidden;
+    font-family: "Montserrat",sans-serif;
+}
+.animate-spin {
+    animation: spin 10s linear infinite;
+}
