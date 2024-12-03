@@ -4,7 +4,7 @@ import React from 'react'
 function RegisterPage() {
   return (
     <div className=" flex items-center justify-center">
-      <SignUp signInUrl="/login" />
+      <SignUp signIpUrl="/login" />
     </div>
   );
 }

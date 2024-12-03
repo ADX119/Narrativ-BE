@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import MainCategories from "../components/MainCategories";
+import FeaturedPost from "../components/FeaturedPost";
 
 function Homepage() {
   return (
@@ -16,11 +18,8 @@ function Homepage() {
           <h1 className="text-gray-800 text-2xl md:text-4xl lg:text-6xl font-bold">
             Lorem ipsum, dolor sit amet consectetur
           </h1>
-          <p className="mt-8 text-md md:text-xl">
+          <p className="mt-4 text-md md:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            corporis sequi impedit laboriosam, vel dicta deserunt perspiciatis.
-            Quod, repellendus cupiditate voluptatum facilis, odit obcaecati,
-            voluptates quo maxime pariatur quis quia!
           </p>
         </div>
         {/*animated button*/}
@@ -64,7 +63,10 @@ function Homepage() {
           </button>
         </Link>
       </div>
+      {/* CATEGORIES */}
+      <MainCategories/>
       {/*FEATURED POSTS*/}
+      <FeaturedPost/>
       {/*POST LIST(INFINITE SCROLL)*/}
     </div>
   );
