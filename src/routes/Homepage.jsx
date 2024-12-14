@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import MainCategories from "../components/MainCategories";
 import FeaturedPost from "../components/FeaturedPost";
+import PostList from "../components/PostList";
 
 function Homepage() {
   return (
-    <div className="mt-4 flex flex-col gap-4">
+    <div className="mt-4 flex flex-col gap-4 over">
       {/*BREADCRUMS*/}
       <div className="flex gap-4">
         <Link to="/">Home</Link>
@@ -68,6 +69,12 @@ function Homepage() {
       {/*FEATURED POSTS*/}
       <FeaturedPost/>
       {/*POST LIST(INFINITE SCROLL)*/}
+      <div className="">
+        <h1 className="my-8 text-2xl text-gray-600">
+          Recent Posts
+        </h1>
+        <PostList/>
+      </div>
     </div>
   );
 }
