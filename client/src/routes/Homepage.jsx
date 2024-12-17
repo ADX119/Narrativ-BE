@@ -16,7 +16,7 @@ function Homepage() {
       <div className="flex items-center justify-center">
         {/*title*/}
         <div className="">
-          <h1 className="text-gray-800 text-2xl md:text-4xl lg:text-6xl font-bold">
+          <h1 className="text-gray-800 text-xl md:text-2xl lg:text-4xl font-bold">
             Lorem ipsum, dolor sit amet consectetur
           </h1>
           <p className="mt-4 text-md md:text-xl">
@@ -26,10 +26,10 @@ function Homepage() {
         {/*animated button*/}
         <Link
           to="write"
-          className="hidden md:block relative"
+          className="hidden md:block relative mx-40"
         >
           <svg
-            className="text-lg tracking-widest animate-spin"
+            className="text-lg tracking-widest animate-spin ml-40"
             viewBox="0 0 200 200"
             width="200"
             height="200"
@@ -48,7 +48,7 @@ function Homepage() {
               </textPath>
             </text>
           </svg>
-          <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-blue-800 rounded-full flex items-center justify-center">
+          <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-blue-800 rounded-full flex items-center justify-center ml-20">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

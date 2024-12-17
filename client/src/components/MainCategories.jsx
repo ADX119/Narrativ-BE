@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 function MainCategories() {
   return (
-    <div className="hidden md:flex bg-white rounded-3xl xl:rounded-full p-4 shadow-lg items-center justify-center gap-8">
+    <div className="hidden md:flex bg-[#dadada] rounded-3xl xl:rounded-full p-4 shadow-lg items-center justify-center gap-8">
       {/*Links*/}
-      <div className="flex-1 flex items-center justify-between flex-wrap">
+      <div className="flex-1 flex items-center justify-between flex-wrap text-xl">
         <Link
           to="/posts"
-          className="bg-blue-800 text-white rounded-full px-4 py-2"
+          className="bg-[#1F3A6F] text-white rounded-full px-4 py-2"
         >
           All Posts
         </Link>
@@ -51,7 +51,11 @@ function MainCategories() {
           <circle cx="10.5" cy="10.5" r="7.5" />
           <line x1="16.5" y1="16.5" x2="22" y2="22" />
         </svg>
-        <input type='text' placeholder='search a post....' className='bg-transparent border-none outline-none' />
+        <input
+          type="text"
+          placeholder="search a post...."
+          className="bg-transparent border-none outline-none"
+        />
       </div>
     </div>
   );
