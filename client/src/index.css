@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: #EAEAEA;
+    width: 100vw;
+    font-family: "Montserrat",sans-serif;
+}
+.animate-spin {
+    animation: spin 10s linear infinite;
+}
+.ql-container{
+    border:none !important;
+
+}
+.ql-toolbar{
+    border:none !important;
+
+}
+.ql-editor{
+    border:none !important;
+
+}
