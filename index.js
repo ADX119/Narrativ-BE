@@ -7,13 +7,13 @@ import postRouter from "./routes/post.route.js"
 import commentRouter from "./routes/comment.route.js"
 import webhookRouter from "./routes/webhook.route.js"
 const app = express();
+app.use("/webhooks",webhookRouter);
 
 app.use(express.json());
 
 app.use("/users",userRouter);
 app.use("/posts",postRouter);
 app.use("/comments",commentRouter);
-app.use("/webhooks",webhookRouter);
 
 
 app.use((error,req,res,next)=>{
