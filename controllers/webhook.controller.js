@@ -23,7 +23,9 @@ export const clerkWebHook = async (req, res) => {
     });
   }
 
-
+  
+try {
+  
 if (evt.type === "user.created") {
   // Check if necessary data exists
   if (
@@ -38,24 +40,26 @@ if (evt.type === "user.created") {
         message: "Required user data is missing in the webhook payload!",
       });
   }
-
   const newUser = new User({
     clerkUserId: evt.data.id, // Clerk User ID
     username: evt.data.username || evt.data.email_addresses[0].email_address, // Username or email if username is missing
     email: evt.data.email_addresses[0].email_address, // Email address from the webhook payload
     img: evt.data.profile_image_url || evt.data.image_url, // Profile image (fallback to other URL)
   });
-  console.log(evt.data.id);
+  // console.log(evt.data.id);
 
-  try {
     // Save the user to the database
-    await newUser.save();
-  } catch (err) {
+    // await newUser.save();
+    const saveUser = await newUser.save();
+    console.log(saveUser)
+    // console.log(newUser)
+  } 
+}catch (err) {
     return res
       .status(500)
       .json({ message: "Failed to save user", error: err.message });
   }
-}
+
 
   if (evt.type === "user.deleted") {
     const deletedUser = await User.findOneAndDelete({
