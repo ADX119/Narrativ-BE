@@ -1,12 +1,12 @@
-import mongoose from "mongoose";
 import { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 const postSchema = new Schema(
   {
-    user:{
-        type : Schema.Types.ObjectID,
-        ref : "User",
-        required : true
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
     img: {
       type: String,
@@ -23,17 +23,21 @@ const postSchema = new Schema(
     desc: {
       type: String,
     },
+    category: {
+      type: String,
+      default: "general",
+    },
     content: {
       type: String,
       required: true,
     },
     isFeatured: {
       type: Boolean,
-      default: false
+      default: false,
     },
     visit: {
       type: Number,
-      default: 0
+      default: 0,
     },
   },
   { timestamps: true }
